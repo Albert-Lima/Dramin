@@ -1,0 +1,189 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --var-ColorMain: #000000;
+    --var-ColorMainOpacity: #000000f1;
+    --var-FontMain: "Roboto Condensed", sans-serif;
+}
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box_animation_logo{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes logo {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(20px);
+    }
+}
+.logo{
+    animation-duration: 1s;
+    animation-name: logo;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    height: 500px;
+    width: 500px;
+}
+.logo img{
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.057));
+    max-height: 100%;
+}
+.logomarca{
+    font-family: var(--var-FontMain);
+    font-size: 15pt;
+}
+@keyframes waveBefore{
+    to{
+        border-top-left-radius: 60%;
+        border-top-right-radius: 20%;
+    }
+}
+@keyframes waveMain {
+    to{
+        border-top-left-radius: 20%;
+        border-top-right-radius: 60%;
+    }
+}
+.info_redirect::after{
+    animation-name: waveBefore;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    content: "";
+    display: block;
+    color: #fff;
+    background-color: var(--var-ColorMainOpacity);
+    height: 40vh;
+    width: 130vw;
+    position: absolute;
+    z-index: -1;
+    padding-top: 50px;
+    margin-top: -50px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 60%;
+    font-size: 16px;
+}
+.info_redirect{
+    animation-name: waveMain;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    height: 40vh;
+    width: 130vw;
+    transform: translateX(-15vw);
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--var-ColorMain);
+    border-top-left-radius: 60%;
+    border-top-right-radius: 20%;
+    margin: auto;
+    z-index: 1;
+}
+.info_redirect p{
+    color: white;
+    font-family: var(--var-FontMain);
+    font-size: 15pt;
+}
+.info_redirect span{
+    margin-top: 20px;
+    color: white;
+    font-family: var(--var-FontMain);
+    font-size: 25pt;
+}
+footer{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--var-ColorMain);
+    z-index: 100;
+    position: relative;
+}
+footer div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+footer div p{
+    color: white;
+    font-family: var(--var-FontMain);
+    font-size: 10pt;
+}
+#link_portifólio{
+    text-decoration: none;
+    color: white;
+    font-family: var(--var-FontMain);
+    font-size: 10pt;
+}
+
+@media (max-width: 500px) {
+    .logo{
+        height: 300px;
+        width: 300px;
+    }
+    @keyframes waveBefore{
+        to{
+            border-top-left-radius: 60%;
+            border-top-right-radius: 20%;
+        }
+    }
+    @keyframes waveMain {
+        to{
+            border-top-left-radius: 20%;
+            border-top-right-radius: 60%;
+        }
+    }
+    .info_redirect::after{
+        animation-duration: 2s;
+        width: 200vw;
+        margin-top: -50px;
+        border-top-left-radius: 10%;
+        border-top-right-radius: 70%;
+    }
+    .info_redirect{
+        animation-duration: 2s;
+        height: 40vh;
+        width: 200vw;
+        transform: translateX(-50vw);
+        border-top-left-radius: 60%;
+        border-top-right-radius: 20%;
+    }
+    .info_redirect p{
+        color: white;
+        font-family: var(--var-FontMain);
+        font-size: 10pt;
+    }
+    .info_redirect span{
+        margin-top: 20px;
+        color: white;
+        font-family: var(--var-FontMain);
+        font-size: 20pt;
+    }
+}
