@@ -18,5 +18,5 @@ const intervalo = setInterval(function() {
 
 // Redireciona para a página especificada após 5 segundos
 setTimeout(function() {
-  window.location.href = "https://wa.me/5585989390143?text=Olá, vim pelo Google. Gostaria de fazer um orçamento!";
+  window.location.href = "https://wa.me/1198116-6300?text=Olá, vim pelo Google. Gostaria de fazer um orçamento!";
 }, 5000); // 5000 milissegundos = 5 segundos
