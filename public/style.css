@@ -39,12 +39,12 @@ body{
     animation-name: logo;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
 }
 .logo img{
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.057));
-    max-height: 100%;
+    max-height: 90%;
 }
 .logomarca{
     font-family: var(--var-FontTwo);
